@@ -34,12 +34,29 @@ public class GreetingControllerTests {
 	@Autowired
 	private MockMvc mockMvc;
 
+	/**
+	 * Teste que valida se o método GET do endpoint "/greeting" sem parâmetros
+	 * retorna uma resposta HTTP com status 200 (OK) e o corpo da resposta contém
+	 * a mensagem padrão "Hello, World!".
+	 * Este teste tem como objetivo garantir que o endpoint esteja funcionando corretamente
+	 * ao retornar a mensagem padrão para uma requisição sem parâmetros.
+	 */
+
 	@Test
 	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
 
 		this.mockMvc.perform(get("/greeting")).andDo(print()).andExpect(status().isOk())
 				.andExpect(jsonPath("$.content").value("Hello, World!"));
 	}
+
+	/**
+	 * Teste que valida se o método GET do endpoint "/greeting" com o parâmetro "name"
+	 * retornando uma resposta HTTP com status 200 (OK) e o corpo da resposta contém
+	 * a mensagem personalizada no formato "Hello, [nome]", onde [nome] é o valor passado
+	 * no parâmetro "name".
+	 * Este teste tem como objetivo garantir que o endpoint seja capaz de personalizar
+	 * a resposta de acordo com o valor fornecido no parâmetro da requisição.
+	 */
 
 	@Test
 	public void paramGreetingShouldReturnTailoredMessage() throws Exception {
