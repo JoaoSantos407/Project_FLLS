@@ -39,7 +39,7 @@ public class GreetingControllerTests {
 	 * retorna uma resposta HTTP com status 200 (OK) e o corpo da resposta contém
 	 * a mensagem padrão "Hello, World!".
 	 * Este teste tem como objetivo garantir que o endpoint esteja funcionando corretamente
-	 * ao retornar a mensagem padrão para uma requisição sem parâmetros.
+	 * ao retornar a mensagem padrão para uma requisição sem parâmetros
 	 */
 
 	@Test
@@ -55,7 +55,7 @@ public class GreetingControllerTests {
 	 * a mensagem personalizada no formato "Hello, [nome]", onde [nome] é o valor passado
 	 * no parâmetro "name".
 	 * Este teste tem como objetivo garantir que o endpoint seja capaz de personalizar
-	 * a resposta de acordo com o valor fornecido no parâmetro da requisição.
+	 * a resposta de acordo com o valor fornecido no parâmetro da requisição
 	 */
 
 	@Test
